@@ -1,4 +1,4 @@
-package br.com.caelum.ingresso.validacao;
+package br.com.caelum.ingresso.validation;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -40,7 +40,7 @@ public class GerenciadorDeSessao {
 			LocalDateTime terminoSessaoNova = getTerminoSessaoComDiaDeHoje(sessaoNova);
 	
 			boolean sessaoNovaTerminaAntesDaExistente = terminoSessaoNova.isBefore(inicioSessaoExistente);
-			boolean sessaoNovaComecaDepoisDaExistente = terminoSessaoNova.isBefore(inicioSessaoNova);
+			boolean sessaoNovaComecaDepoisDaExistente = terminoSessaoExistente.isBefore(inicioSessaoNova);
 	
 			if(sessaoNovaTerminaAntesDaExistente || sessaoNovaComecaDepoisDaExistente) {
 				return false;
