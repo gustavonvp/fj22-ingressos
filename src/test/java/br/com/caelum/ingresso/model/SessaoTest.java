@@ -9,7 +9,6 @@ import org.junit.Test;
 import org.junit.Assert;
 
 public class SessaoTest {
-	@SuppressWarnings("deprecation")
 	@Test
 	public void oPrecoDaSessaoDeveSerIgualASomaDoPrecoDaSalaMaisOPrecoDoFilme()
 	{
